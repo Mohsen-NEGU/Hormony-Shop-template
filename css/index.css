@@ -206,7 +206,7 @@ header > section.hero > div.left{
         position: absolute;
         top: 0;
         left: 100%;
-        transform: translate(0);
+        transform: translate(0 , 0);
         transition: var(--animation-timing);
     }
     header > .menu .links li{
@@ -217,7 +217,7 @@ header > section.hero > div.left{
         position: absolute;
         top: 0;
         left: 100%;
-        transform: translate(-100%);
+        transform: translate(-100% ,0);
     }
     header > section.hero{
         padding-top: 60px;
