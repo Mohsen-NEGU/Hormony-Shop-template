@@ -194,6 +194,31 @@ header > section.hero > div.left{
         border: none;
         pointer-events: none;
     }
+    header > .menu .links{
+        padding: 100px 0;
+        display: none;
+        direction: rtl;
+        justify-content: flex-end;
+        background-color: var(--color-link);
+        padding:230px 0;
+        width:max-content;
+        min-height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        transform: translate(0);
+        transition: var(--animation-timing);
+    }
+    header > .menu .links li{
+        padding: 40px 40px;
+    }
+    header > .menu > .hamburger-menu:has(input:checked) ~ .links{
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        transform: translate(-100%);
+    }
     header > section.hero{
         padding-top: 60px;
         grid-column: 1/3;
