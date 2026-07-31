@@ -227,7 +227,7 @@ header > section.hero > div.left{
         align-items: center;
     }
     header > section.hero > div.right{
-        width: 100%;
+        width: max-content;
         text-align: center;
         color: var(--color-btn);
         font-size: var(--font-p);
@@ -237,8 +237,8 @@ header > section.hero > div.left{
         font-size: var(--font-h3);
     }
     header > section.hero > div.left{
-        padding: 40px 30px;
-        width: 350px;
+        padding: 40px 40px;
+        width: 300px;
         justify-self: center;
     }
 }
@@ -336,4 +336,61 @@ header > section.hero > div.left{
         justify-self: center;
     }
 }
-/* --------------------------------------| Responsive 744px to 1728px for mackbook pro 16|--------------------------------- */
+/* ----------------------------------------------| Responsive 744px to 1024px |--------------------------------------------- */
+@media (min-width: 744px) and (max-width: 1024px) {
+    header > section.hero{
+        padding-top: 60px;
+        grid-column: 1/3;
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+    }
+    header > section.hero > div.right{
+        width: 500px;
+        text-align: center;
+        color: var(--color-btn);
+        font-size: 13px;
+        justify-self: center;
+    }
+    header > section.hero > div.right > h1{
+        font-size: var(--font-h2);
+    }
+    header > section.hero > div.left{
+        padding: 40px 30px;
+        width: 400px;
+        justify-self: center;
+    }
+}
+
+/* --------------------------------------| Responsive 1024px to 1728px for mackbook pro 16|--------------------------------- */
+@media (min-width: 1024px) and (max-width: 1728px) {
+    header{
+        padding: 25px 20px;
+    }
+    header > .menu > .links{
+        padding: 25px 0;
+        font-size: 13px;
+    }
+    header > section.hero{
+        padding-top: 60px;
+        grid-column: 1/3;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+    header > section.hero > div.right{
+        width: 500px;
+        text-align: center;
+        color: var(--color-btn);
+        font-size: 13px;
+        justify-self: center;
+    }
+    header > section.hero > div.right > h1{
+        font-size: var(--font-h2);
+    }
+    header > section.hero > div.left{
+        padding: 40px 30px;
+        width: 400px;
+        justify-self: center;
+    }
+}
