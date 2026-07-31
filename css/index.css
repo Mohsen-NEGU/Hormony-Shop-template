@@ -9,6 +9,13 @@
     --font-h3: 35px;
     --font-p: 15px;
     --font-p-improtant: 19px;
+    /* for hamburger menu */
+    --bar-width: 40px;
+    --bar-height: 6px;
+    --hamburger-gap:8px;
+    --hamburger-margin: 9px;
+    --animation-timing: 200ms ease-in-out;
+    --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
 }
 
 /* --------------------------------------| Tags |--------------------------------- */
@@ -73,6 +80,15 @@ header > .logo > pre{
     left: 100%;
     transform: translate(0 , -50%);
 }
+header > .menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+header > .menu > .hamburger-menu{
+    display: none;
+    align-self: flex-end;
+}
 header > .menu > .links{
     padding: 25px 0;
     display: flex;
@@ -122,7 +138,146 @@ header > section.hero > div.left{
 }
 
 /* --------------------------------------| Responsive 0px to 393px for iphone 14 & 15 Pro|--------------------------------- */
-
+@media (min-width: 0px) and (max-width: 393px) {
+    header > .logo{
+        width: 50px;
+        height: 50px;
+        position: relative;
+    }
+    header > .menu > .hamburger-menu{
+        display: block;
+        align-self: flex-end;
+        --x-width:calc(var(--hamburger-height)* 1.12);
+        display: flex;
+        flex-direction: column;
+        gap: var(--hamburger-gap);
+        width: max-content;
+        z-index: 2;
+        cursor: pointer;
+    }
+    header > .menu > .hamburger-menu:has(input:focus-visible)::after,
+    header > .menu > .hamburger-menu:has(input:focus-visible)::before,
+    header > .menu > .hamburger-menu input:focus-visible{
+        border: 1px solid var(--background);
+        box-shadow: 0 0 1px var(--foreground);
+    }
+    header > .menu > .hamburger-menu::after,
+    header > .menu > .hamburger-menu::before,
+    header > .menu > .hamburger-menu input{
+        content: '';
+        width: 30px;
+        height: 4px;
+        background-color: var(--color-btn);
+        transition: opacity var(--animation-timing) , width var(--animation-timing) , transform var(--animation-timing);
+        transform-origin: left center;
+    }
+    header > .menu > .hamburger-menu:has(input:checked)::before{
+        transform:translate(0 , calc(var(--bar-height) / -2)) rotate(45deg);
+        width: var(--x-width);
+    }
+    header > .menu > .hamburger-menu:has(input:checked)::after{
+        transform:translate(0 , calc(var(--bar-height) / -2)) rotate(-45deg);
+        width: var(--x-width);  
+    }
+    header > .menu > .hamburger-menu input:checked{
+        opacity: 0;
+        width: 0;
+    }
+    header > .menu > .hamburger-menu input{
+        appearance: none;
+        border: none;
+        pointer-events: none;
+    }
+    header > section.hero{
+        padding-top: 60px;
+        grid-column: 1/3;
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+    }
+    header > section.hero > div.right{
+        width: 100%;
+        text-align: center;
+        color: var(--color-btn);
+        font-size: var(--font-p);
+        justify-self: center;
+    }
+    header > section.hero > div.right > h1{
+        font-size: var(--font-h3);
+    }
+    header > section.hero > div.left{
+        padding: 40px 30px;
+        width: 350px;
+        justify-self: center;
+    }
+}
 /* --------------------------------------| Responsive 393px to 744px for ipad mini 8.3|--------------------------------- */
-
+@media (min-width: 393px) and (max-width: 744px) {
+    header > .menu > .hamburger-menu{
+        display: block;
+        align-self: flex-end;
+        --x-width:calc(var(--hamburger-height)* 1.12);
+        display: flex;
+        flex-direction: column;
+        gap: var(--hamburger-gap);
+        width: max-content;
+        z-index: 2;
+        cursor: pointer;
+    }
+    header > .menu > .hamburger-menu:has(input:focus-visible)::after,
+    header > .menu > .hamburger-menu:has(input:focus-visible)::before,
+    header > .menu > .hamburger-menu input:focus-visible{
+        border: 1px solid var(--background);
+        box-shadow: 0 0 1px var(--foreground);
+    }
+    header > .menu > .hamburger-menu::after,
+    header > .menu > .hamburger-menu::before,
+    header > .menu > .hamburger-menu input{
+        content: '';
+        width: var(--bar-width);
+        height: var(--bar-height);
+        background-color: var(--color-btn);
+        transition: opacity var(--animation-timing) , width var(--animation-timing) , transform var(--animation-timing);
+        transform-origin: left center;
+    }
+    header > .menu > .hamburger-menu:has(input:checked)::before{
+        transform:translate(0 , calc(var(--bar-height) / -2)) rotate(45deg);
+        width: var(--x-width);
+    }
+    header > .menu > .hamburger-menu:has(input:checked)::after{
+        transform:translate(0 , calc(var(--bar-height) / -2)) rotate(-45deg);
+        width: var(--x-width);  
+    }
+    header > .menu > .hamburger-menu input:checked{
+        opacity: 0;
+        width: 0;
+    }
+    header > .menu > .hamburger-menu input{
+        appearance: none;
+        border: none;
+        pointer-events: none;
+    }
+    header > section.hero{
+        padding-top: 60px;
+        grid-column: 1/3;
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+    }
+    header > section.hero > div.right{
+        width: 100%;
+        text-align: center;
+        color: var(--color-btn);
+        font-size: var(--font-p);
+        justify-self: center;
+    }
+    header > section.hero > div.right > h1{
+        font-size: var(--font-h2);
+    }
+    header > section.hero > div.left{
+        padding: 40px 30px;
+        width: 500px;
+        justify-self: center;
+    }
+}
 /* --------------------------------------| Responsive 744px to 1728px for mackbook pro 16|--------------------------------- */
