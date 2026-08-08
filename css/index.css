@@ -253,7 +253,7 @@ main.index >.container > section.hero > div.left{
 }
 /* --------------------------------------| Responsive 393px to 744px for ipad mini 8.3|--------------------------------- */
 @media (min-width: 393px) and (max-width: 744px) {
-    header > .menu > .hamburger-menu{
+    header >.container > .menu > .hamburger-menu{
         display: block;
         align-self: flex-end;
         --x-width:calc(var(--hamburger-height)* 1.12);
@@ -264,15 +264,15 @@ main.index >.container > section.hero > div.left{
         z-index: 2;
         cursor: pointer;
     }
-    header > .menu > .hamburger-menu:has(input:focus-visible)::after,
-    header > .menu > .hamburger-menu:has(input:focus-visible)::before,
-    header > .menu > .hamburger-menu input:focus-visible{
+    header >.container > .menu > .hamburger-menu:has(input:focus-visible)::after,
+    header >.container > .menu > .hamburger-menu:has(input:focus-visible)::before,
+    header >.container > .menu > .hamburger-menu input:focus-visible{
         border: 1px solid var(--background);
         box-shadow: 0 0 1px var(--foreground);
     }
-    header > .menu > .hamburger-menu::after,
-    header > .menu > .hamburger-menu::before,
-    header > .menu > .hamburger-menu input{
+    header >.container > .menu > .hamburger-menu::after,
+    header >.container > .menu > .hamburger-menu::before,
+    header >.container > .menu > .hamburger-menu input{
         content: '';
         width: var(--bar-width);
         height: var(--bar-height);
@@ -280,24 +280,24 @@ main.index >.container > section.hero > div.left{
         transition: opacity var(--animation-timing) , width var(--animation-timing) , transform var(--animation-timing);
         transform-origin: left center;
     }
-    header > .menu > .hamburger-menu:has(input:checked)::before{
+    header >.container > .menu > .hamburger-menu:has(input:checked)::before{
         transform:translate(0 , calc(var(--bar-height) / -2)) rotate(45deg);
         width: var(--x-width);
     }
-    header > .menu > .hamburger-menu:has(input:checked)::after{
+    header >.container > .menu > .hamburger-menu:has(input:checked)::after{
         transform:translate(0 , calc(var(--bar-height) / -2)) rotate(-45deg);
         width: var(--x-width);  
     }
-    header > .menu > .hamburger-menu input:checked{
+    header >.container > .menu > .hamburger-menu input:checked{
         opacity: 0;
         width: 0;
     }
-    header > .menu > .hamburger-menu input{
+    header >.container >.container > .menu > .hamburger-menu input{
         appearance: none;
         border: none;
         pointer-events: none;
     }
-    header > .menu .links{
+    header >.container > .menu .links{
         padding: 100px 0;
         display: none;
         direction: rtl;
@@ -312,34 +312,34 @@ main.index >.container > section.hero > div.left{
         transform: translate(0);
         transition: var(--animation-timing);
     }
-    header > .menu .links li{
+    header >.container > .menu .links li{
         padding: 40px 40px;
     }
-    header > .menu > .hamburger-menu:has(input:checked) ~ .links{
+    header >.container > .menu > .hamburger-menu:has(input:checked) ~ .links{
         display: block;
         position: absolute;
         top: 0;
         left: 100%;
         transform: translate(-100%);
     }
-    header > section.hero{
+    main.index >.container > section.hero{
         padding-top: 60px;
         grid-column: 1/3;
         display: grid;
         grid-template-columns: 1fr;
         align-items: center;
     }
-    header > section.hero > div.right{
+    main.index >.container > section.hero > div.right{
         width: 100%;
         text-align: center;
         color: var(--color-btn);
         font-size: var(--font-p);
         justify-self: center;
     }
-    header > section.hero > div.right > h1{
+    main.index >.container > section.hero > div.right > h1{
         font-size: var(--font-h2);
     }
-    header > section.hero > div.left{
+    main.index >.container > section.hero > div.left{
         padding: 40px 30px;
         width: 500px;
         justify-self: center;
