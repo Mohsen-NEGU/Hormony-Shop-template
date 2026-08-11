@@ -109,31 +109,31 @@ header >.container{
     font-size: var(--font-p);
     color: var(--color-text);
 }
-section.hero{
+.hero{
     padding-top: 60px;
     grid-column: 1/3;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
 }
-div.right{
+.right{
     width: 380px;
     color: var(--color-btn);
     font-size: var(--font-p);
     justify-self: flex-start;
 }
-div.right > h1{
+.right  h1{
     padding: 20px 0;
     font-size: var(--font-h1);
     color: var(--color-text);
 }
-div.right > h1 > span{
+.right  h1  span{
     color: var(--color-btn);
 }
-div.right > p{
+.right  p{
     padding-bottom: 40px ;
 }
-div.right > a{
+.right  a{
     padding: 10px  25px;
     color: var(--color-link);
     background-color: var(--color-btn);
@@ -141,19 +141,19 @@ div.right > a{
     border-radius: 25px;
     transition: var(--animation-timing);
 }
-div.right > a:hover{
+.right  a:hover{
     color: var(--color-btn);
     background-color: var(--color-website);
     border: 2px solid var(--color-btn);
 }
-div.left{
+.left{
     padding: 0 30px;
     width: 500px;
     justify-self: flex-end;
 }
 
-/* --------------------------------------| Responsive 0px to 393px for iphone 14 & 15 Pro|--------------------------------- */
-@media (min-width: 0px) and (max-width: 393px) {
+/* --------------------------------------| Responsive 0px to 425px for iphone 14 & 15 Pro|--------------------------------- */
+@media (max-width: 425px) {
     .logo{
         width: 50px;
         height: 50px;
@@ -232,31 +232,31 @@ div.left{
         left: 100%;
         transform: translate(-100% ,0);
     }
-    section.hero{
+    .hero{
         padding-top: 60px;
         grid-column: 1/3;
         display: grid;
         grid-template-columns: 1fr;
         align-items: center;
     }
-    section.hero > div.right{
+    .hero .right{
         width: max-content;
         text-align: center;
         color: var(--color-btn);
         font-size: var(--font-p);
         justify-self: center;
     }
-    section.hero > div.right > h1{
+    .hero .right  h1{
         font-size: var(--font-h3);
     }
-    section.hero > div.left{
+    .hero .left{
         padding: 40px 40px;
         width: 300px;
         justify-self: center;
     }
 }
-/* --------------------------------------| Responsive 393px to 744px for ipad mini 8.3|--------------------------------- */
-@media (min-width: 393px) and (max-width: 744px) {
+/* --------------------------------------| Responsive 425px to 768px for ipad mini 8.3|--------------------------------- */
+@media (min-width: 425px) and (max-width: 768px) {
     .hamburger-menu{
         display: block;
         align-self: flex-end;
@@ -326,82 +326,82 @@ div.left{
         left: 100%;
         transform: translate(-100%);
     }
-    section.hero{
+    .hero{
         padding-top: 60px;
         grid-column: 1/3;
         display: grid;
         grid-template-columns: 1fr;
         align-items: center;
     }
-    section.hero > div.right{
+    .hero  .right{
         width: 100%;
         text-align: center;
         color: var(--color-btn);
         font-size: var(--font-p);
         justify-self: center;
     }
-    section.hero > div.right > h1{
+    .hero  .right  h1{
         font-size: var(--font-h2);
     }
-    section.hero > div.left{
+    .hero  .left{
         padding: 40px 30px;
         width: 500px;
         justify-self: center;
     }
 }
-/* ----------------------------------------------| Responsive 744px to 1024px |--------------------------------------------- */
-@media (min-width: 744px) and (max-width: 1024px) {
-    section.hero{
+/* ----------------------------------------------| Responsive 768px to 1024px |--------------------------------------------- */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .hero{
         padding-top: 60px;
         grid-column: 1/3;
         display: grid;
         grid-template-columns: 1fr;
         align-items: center;
     }
-    section.hero  div.right{
+    .hero  .right{
         width: 500px;
         text-align: center;
         color: var(--color-btn);
         font-size: 13px;
         justify-self: center;
     }
-    section.hero  div.right  h1{
+    .hero  .right  h1{
         font-size: var(--font-h2);
     }
-    section.hero  div.left{
+    .hero  .left{
         padding: 40px 30px;
         width: 400px;
         justify-self: center;
     }
 }
 
-/* --------------------------------------| Responsive 1024px to 1728px for mackbook pro 16|--------------------------------- */
-@media (min-width: 1024px) and (max-width: 1728px) {
+/* --------------------------------------| Responsive 1024px to 1440px for mackbook pro 16|--------------------------------- */
+@media (min-width: 1024px) and (max-width: 1440px) {
     header{
         padding: 25px 20px;
     }
-    .menu > .links{
+    .menu  .links{
         padding: 25px 0;
         font-size: 13px;
     }
-    section.hero{
+    .hero{
         padding-top: 60px;
         grid-column: 1/3;
         display: grid;
         grid-template-columns: 1fr 1fr;
         align-items: center;
     }
-    section.hero > div.right{
+    .hero  .right{
         width: 500px;
         text-align: center;
         color: var(--color-btn);
         font-size: 13px;
         justify-self: center;
     }
-    section.hero > div.right > h1{
+    .hero  .right  h1{
         font-size: var(--font-h2);
     }
-    section.hero > div.left{
+    .hero  .left{
         padding: 40px 30px;
         width: 400px;
         justify-self: center;
